@@ -1,0 +1,67 @@
+name: Run Backtest
+
+on:
+  # Run automatically right after the universe update finishes — same pattern as
+  # daily_watchlist_email.yml. Kept as its own workflow (not a job inside
+  # update-universe) so the backtest's weight and its git push stay OFF the
+  # critical daily path and can't muddy update-universe's conclusion, which the
+  # watchlist email gates on.
+  workflow_run:
+    workflows: ["Daily Universe Update"]
+    types:
+      - completed
+  workflow_dispatch:   # manual trigger for testing
+
+jobs:
+  backtest:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    # Only run on a manual dispatch OR when the universe update actually
+    # succeeded — never off a failed/cancelled universe run.
+    if: ${{ github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success' }}
+    permissions:
+      contents: write   # the commit-results step pushes
+
+    steps:
+      - name: Checkout (FULL history)
+        uses: actions/checkout@v4
+        with:
+          # fetch-depth: 0 is REQUIRED. The backtest reconstructs each daily
+          # snapshot from the git history of universe_scored.csv; a shallow
+          # clone (the default) would expose only today's file and the runner
+          # would correctly report "no archive". workflow_run does not change
+          # this — checkout is still shallow by default.
+          fetch-depth: 0
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run backtest
+        run: python backtest_runner.py
+
+      - name: Upload results
+        uses: actions/upload-artifact@v4
+        with:
+          name: backtest-results
+          path: |
+            backtest_results.csv
+            backtest_summary.json
+          retention-days: 90
+
+      - name: Commit results to repo
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          # backtest_price_cache.csv is committed so runs reuse the immutable
+          # historical closes instead of re-hammering yfinance each time.
+          git add backtest_results.csv backtest_summary.json backtest_price_cache.csv || true
+          # No-op runs (status unchanged, e.g. still INSUFFICIENT_DATA) produce
+          # no diff and no commit — guards against empty daily commits.
+          git diff --cached --quiet || git commit -m "Backtest $(date +%Y-%m-%d)"
+          git pull --rebase origin main || true
+          git push || true

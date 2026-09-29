@@ -1,0 +1,65 @@
+# Daily macro OBSERVATION. Writes macro_series.json; nothing reads it yet.
+#
+# Deliberately NOT folded into update-universe.yml: different cadence, and the
+# universe run must not acquire a dependency on Google CSE quota. A CSE outage
+# must never be able to stop the universe from scoring.
+name: macro-snapshot
+
+on:
+  schedule:
+    - cron: '0 2 * * 1-5'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: macro-snapshot
+  cancel-in-progress: false
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install requests google-genai
+
+      - name: Fetch macro scalars
+        env:
+          TAVILY_API_KEY: ${{ secrets.TAVILY_API_KEY }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: python macro_fetch.py
+
+      # Runs even when the fetch step failed, because macro_fetch.py writes the
+      # rows BEFORE exiting non-zero on an all-retrievals-failed day. The record
+      # of the failure is itself data the null-rate falsifier needs; losing it
+      # would make an outage indistinguishable from the job never running.
+      #
+      # But the script can also die BEFORE writing anything (missing secrets,
+      # schema mismatch), leaving no file at all. That is a different state from
+      # "wrote failure rows" and must exit cleanly rather than handing git a
+      # path that does not exist. Stage first, then check --cached: that treats
+      # a new untracked file and a modified tracked file identically.
+      - name: Commit series
+        if: always()
+        run: |
+          if [ ! -f macro_series.json ]; then
+            echo "no series file — nothing to commit"
+            exit 0
+          fi
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add macro_series.json
+          if git diff --cached --quiet; then
+            echo "no change to commit"
+            exit 0
+          fi
+          git commit -m "macro: readings $(date -u +%Y-%m-%d)"
+          git pull --rebase --autostash origin ${{ github.ref_name }}
+          git push

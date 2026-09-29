@@ -1,0 +1,45 @@
+name: Attribution data (Sprint 17)
+
+# Manual only. Builds the Sprint 17 evidence — the snapshot panel from git
+# history, five years of adjusted closes for the broad market, and the IIM-A
+# factor file — and hands it back as a downloadable artifact.
+#
+# WHY IN ACTIONS AND NOT ON THE LAPTOP. Measured 2026-09-21 (yf_probe.py): from
+# the dev laptop every .BO ticker returns empty — Reliance's 500325.BO included —
+# while .NS works; from Actions, the same yfinance 1.5.1 priced 1,948 .BO
+# tickers for backtest_price_cache.csv. The difference is the machine, not the
+# ticker or the code. BSE-only names are mostly small companies, so dropping
+# them would bias the size factor.
+#
+# NOTHING IS COMMITTED. The output is an artifact: download it from the run's
+# page, unzip it into the repo folder as attribution_out/, and run the
+# attribution scripts locally.
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0          # the snapshots ARE the git history
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - run: pip install -r requirements.txt
+
+      - name: build panel + prices + IIM-A factors
+        run: python attribution_data.py
+
+      - name: upload attribution_out
+        if: always()              # a partial download is still worth keeping
+        uses: actions/upload-artifact@v4
+        with:
+          name: attribution_out
+          path: attribution_out/
+          retention-days: 14

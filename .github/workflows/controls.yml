@@ -1,0 +1,92 @@
+name: Controls
+
+# The code-change half of the control suite. update-universe.yml runs the same
+# checks against each new universe build; this one runs them against each
+# CODE change, which is the half that was missing entirely.
+#
+# WHY `push` AND NOT `pull_request`. Kordent is edited in the GitHub browser and
+# committed straight to main — there are no pull requests to gate, so a PR
+# workflow would be a control that never runs. A push filtered to Python files
+# is the same control at the same moment: the first thing that happens after an
+# edit lands.
+#
+# The paths filter matters for a second reason: update-universe commits
+# universe_scored.csv every weekday as the bot. Without the filter this workflow
+# would fire on every one of those data commits and duplicate the job that has
+# already run inside update-universe.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '**.py'
+      - 'requirements.txt'
+      - '.github/workflows/controls.yml'
+  workflow_dispatch:
+
+jobs:
+  controls:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - run: pip install -r requirements.txt
+
+      # A control that cannot read its evidence must FAIL, not pass on nothing —
+      # preflight's own Sections E and F make that assertion about themselves,
+      # and the same rule applies to the workflow that invokes it. If the
+      # universe CSV is missing, the run is not green.
+      - name: universe snapshot is present
+        run: |
+          if [ ! -f universe_scored.csv ]; then
+            echo "::error::universe_scored.csv is missing — preflight has no evidence to read."
+            exit 1
+          fi
+          echo "universe_scored.csv: $(wc -l < universe_scored.csv) lines"
+
+      # No --db here. This runs on every code push, including from a fork or a
+      # context where the secrets are not available, and a job that fails on a
+      # missing credential rather than on a real defect is a job people learn to
+      # ignore. G3 shows [SKIP] — a distinct state, never a pass. The live
+      # ledger reconciliation runs with --db in update-universe.yml, daily,
+      # where the credentials genuinely are present.
+      - name: preflight (wiring, economics, costs, rates)
+        run: python preflight.py --csv universe_scored.csv
+
+      - name: reconcile (archive is re-scoreable)
+        run: python reconcile.py universe_scored.csv
+
+      # Neither control imports app.py — Streamlit runs on import, which is why
+      # preflight checks it via AST. That leaves a plain syntax error in app.py
+      # able to reach production, and app.py is 45% of the codebase. Compiling
+      # every module closes that gap for the cost of two seconds.
+      - name: every module compiles
+        run: python -m compileall -q .
+
+      # UNDEFINED NAMES ONLY. Added 2026-09-19 after `_plotly_to_png` and
+      # `_pdf_cur_val` — two functions/variables called but never defined —
+      # sat in the PDF path and took report generation down with a NameError.
+      # `ast.parse` passes on both. `compileall` passes on both. Nothing can
+      # import app.py to find out, because Streamlit runs on import. A name
+      # that does not exist is the one defect class a static pass can prove
+      # without running anything, and it is exactly the class that reaches
+      # production here.
+      #
+      # DELIBERATELY NOT the full pyflakes report. The repo carries ~50 unused
+      # locals, unused imports and placeholder-free f-strings; failing on those
+      # would make this gate the first thing anyone learns to ignore, and a
+      # control that is routinely overridden is worse than no control. Undefined
+      # names are ALWAYS a runtime bug. Nothing else here is.
+      - name: no undefined names
+        run: |
+          pip install -q pyflakes
+          if python -m pyflakes *.py | grep "undefined name"; then
+            echo "::error::A name is used that is never defined — this is a NameError waiting for the code path to run."
+            exit 1
+          fi
+          echo "No undefined names."

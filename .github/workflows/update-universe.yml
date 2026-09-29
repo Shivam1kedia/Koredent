@@ -1,0 +1,141 @@
+name: Daily Universe Update
+
+on:
+  schedule:
+    - cron: '02 09 * * 1-5'
+  workflow_dispatch:
+    inputs:
+      skip_universe:
+        description: 'Skip the 90-min universe rebuild; run the tracker only'
+        required: false
+        default: 'false'
+        type: choice
+        options: ['false', 'true']
+
+jobs:
+  update-universe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+          pip install --upgrade --no-cache-dir yfinance
+
+      - name: Run universe updater
+        if: inputs.skip_universe != 'true'
+        run: python -u universe_updater.py
+
+      # The tracker used to run HERE, in this job, under `bash -e`. On
+      # 2026-07-09 it raised on a NaN and the commit step below never ran —
+      # two hours of universe data discarded, and daily_watchlist_email.yml
+      # (which gates on this workflow succeeding) never fired either.
+      # Producing the CSV and consuming it are now separate jobs.
+
+      - name: Commit updated CSV
+        if: inputs.skip_universe != 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          git add universe_scored.csv universe_tickers.csv archive_manifest.json nse_tickers_lastgood.csv
+
+          if ! git diff --cached --quiet; then
+            git commit -m "Auto-update: universe scored $(date +%Y-%m-%d)"
+            git pull --rebase origin main
+            git push
+          else
+            echo "No changes detected in universe data. Skipping commit and push."
+          fi
+
+  # ── Separate job, on purpose ──────────────────────────────────────────
+  # The tracker used to run inside update-universe, under `bash -e`. On
+  # 2026-07-09 it raised on a NaN and the commit step never ran: two hours
+  # of universe data discarded, and daily_watchlist_email.yml (which gates
+  # on this workflow succeeding) never fired either. One NaN, three
+  # workflows. Producing the CSV and consuming it are now independent.
+  track-portfolios:
+    needs: update-universe
+    if: always()
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          # WITHOUT this, checkout clones github.sha — the commit that TRIGGERED
+          # the workflow, i.e. the repo state BEFORE update-universe pushed the
+          # new CSV. The tracker would silently score today's portfolios against
+          # yesterday's universe, every single day, with nothing in the log.
+          ref: ${{ github.ref }}
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - run: pip install -r requirements.txt
+
+      - name: Run Daily Portfolio Tracker
+        run: python portfolio_tracker.py
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_KEY: ${{ secrets.SUPABASE_KEY }}
+          ALERT_EMAIL: ${{ secrets.ALERT_EMAIL }}
+          ALERT_EMAIL_PASSWORD: ${{ secrets.ALERT_EMAIL_PASSWORD }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+
+  # ── Controls, Sprint 16 ───────────────────────────────────────────────
+  # preflight.py and reconcile.py were control functions that depended on the
+  # controlled person remembering to run them. They now run on their own.
+  #
+  # AFTER the commit, in a separate job, on purpose. Running them before it
+  # would let a control failure discard a 90-minute universe build — the
+  # 2026-07-09 lesson that split the tracker out of this workflow in the first
+  # place. Here a failure turns the job red and costs no data.
+  #
+  # `needs: update-universe` without `if: always()`: if the universe did not
+  # build, there is nothing new to check and a green-or-red verdict on
+  # yesterday's CSV would be noise.
+  controls:
+    needs: update-universe
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          # Same trap as track-portfolios: without this, checkout clones the
+          # commit that TRIGGERED the workflow, so the controls would silently
+          # validate yesterday's universe every single day.
+          ref: ${{ github.ref }}
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - run: pip install -r requirements.txt
+
+      # G3 reconciles the live ledger against holdings, which needs the DB.
+      # The secrets are already in this workflow for the tracker, so there is
+      # no reason to run the weaker version. --db makes a missing credential a
+      # FAILURE rather than a [SKIP]: in CI, where the credentials are supposed
+      # to be present, a silent skip is the check not running.
+      - name: preflight (wiring, economics, costs, rates, live ledger)
+        run: python preflight.py --csv universe_scored.csv --db
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_KEY: ${{ secrets.SUPABASE_KEY }}
+
+      # Archive integrity: every frozen row must still re-score to itself.
+      - name: reconcile (archive is re-scoreable)
+        run: python reconcile.py universe_scored.csv

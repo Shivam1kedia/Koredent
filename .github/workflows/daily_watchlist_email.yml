@@ -1,0 +1,32 @@
+name: Daily Watchlist Email
+
+on:
+  # Trigger this workflow automatically when the Universe Update finishes
+  workflow_run:
+    workflows: ["Daily Universe Update"]
+    types:
+      - completed
+  # Still allow manual triggering for testing
+  workflow_dispatch:
+
+jobs:
+  watchlist-email:
+    runs-on: ubuntu-latest
+    # CRITICAL: Only run if it was triggered manually OR if the Universe Update actually succeeded
+    if: ${{ github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success' }}
+    steps:
+      - uses: actions/checkout@v4
+      
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          
+      - run: pip install -r requirements.txt
+      
+      - run: python daily_watchlist_email.py
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_KEY: ${{ secrets.SUPABASE_KEY }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          ALERT_EMAIL: ${{ secrets.ALERT_EMAIL }}
+          ALERT_EMAIL_PASSWORD: ${{ secrets.ALERT_EMAIL_PASSWORD }}

@@ -1,0 +1,22 @@
+name: BSE probe (diagnostic)
+
+# Manual, read-only, ~2 minutes. Asks Yahoo why BSE fundamentals work while BSE
+# price history does not. Runs here and not on the laptop because the laptop
+# cannot reach .BO at all, so a laptop answer proves nothing.
+#
+# Delete this workflow once the question is answered.
+
+on:
+  workflow_dispatch:
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install yfinance==1.5.1 curl_cffi==0.15.0 pandas==2.3.3
+      - run: python yf_bse_map_probe.py
