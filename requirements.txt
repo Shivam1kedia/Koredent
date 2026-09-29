@@ -1,0 +1,48 @@
+# Pinned 2026-07-12. Kordent's output is a function of data SEMANTICS.
+#
+# yfinance 1.x changed dividendYield from fraction to percent, corrupting
+#   lynch_pass and dorsey_pass, and made yf.download return MultiIndex columns.
+#   yfinance's native HTTP backend curl_cffi is now pinned — it was floating,
+#   which is what a fresh uv rebuild resolved into a segfault on price download.
+# pandas/numpy stepped back off the 3.0 / 2.4 bleeding edge: every pct_change
+#   call passes fill_method=None explicitly (app.py, portfolio_tracker.py,
+#   selector.py, stats.py), so 2.x is behaviourally identical here and lands
+#   pyarrow/streamlit/curl_cffi on mature, ABI-matched wheels.
+
+yfinance==1.5.1
+curl_cffi==0.15.0
+pandas==2.3.3
+numpy==2.3.5
+supabase==2.31.0
+postgrest==2.31.0
+httpx==0.28.1
+google-genai==2.11.0
+requests==2.34.2
+pymupdf==1.28.0
+protobuf>=5.27,<6
+pyarrow==18.1.0
+
+streamlit
+reportlab
+matplotlib
+pyxirr
+
+# plotly/kaleido PINNED 2026-09-19, and the pin is load-bearing.
+#
+# Static image export needs a browser engine. kaleido 0.2.x BUNDLED its own
+# Chromium and needed nothing from the host. kaleido 1.x dropped the bundle and
+# raises "Kaleido requires Google Chrome to be installed" on any host without
+# Chrome -- which is every Streamlit Cloud container. Left unpinned, a rebuild
+# resolves to plotly 7 + kaleido 1.x and EVERY PDF chart silently disappears:
+# the growth chart falls back to matplotlib, and the goal projection chart,
+# which has no fallback, is simply absent from the report with nothing in the
+# UI to say so.
+#
+# plotly 7.0 removed support for kaleido < 1.0 outright, so 6.x is the newest
+# release that can still drive the self-contained renderer. Verified on this
+# exact pair 2026-09-19: renders an 800x280 PNG with no system Chrome present.
+#
+# THE EXIT FROM THIS PIN is kaleido >= 1 plus a Streamlit `packages.txt`
+# installing chromium, not a version bump on its own. Do not unpin without it.
+plotly>=6,<7
+kaleido==0.2.1

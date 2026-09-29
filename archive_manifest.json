@@ -1,0 +1,266 @@
+[
+  {
+    "date": "2026-07-18",
+    "schema_version": 1,
+    "n_universe": 4240,
+    "n_investable": 2117
+  },
+  {
+    "date": "2026-07-19",
+    "schema_version": 2,
+    "n_universe": 4482,
+    "n_investable": 2233
+  },
+  {
+    "date": "2026-07-20",
+    "schema_version": 3,
+    "n_universe": 4259,
+    "n_investable": 2134
+  },
+  {
+    "date": "2026-07-21",
+    "schema_version": 3,
+    "n_universe": 4338,
+    "n_investable": 2226
+  },
+  {
+    "date": "2026-07-22",
+    "schema_version": 3,
+    "n_universe": 4480,
+    "n_investable": 2209
+  },
+  {
+    "date": "2026-07-23",
+    "schema_version": 3,
+    "n_universe": 4480,
+    "n_investable": 2228
+  },
+  {
+    "date": "2026-07-24",
+    "schema_version": 3,
+    "n_universe": 4477,
+    "n_investable": 2230
+  },
+  {
+    "date": "2026-07-27",
+    "schema_version": 4,
+    "n_universe": 4626,
+    "n_investable": 2314
+  },
+  {
+    "date": "2026-07-28",
+    "schema_version": 5,
+    "n_universe": 4476,
+    "n_investable": 2210
+  },
+  {
+    "date": "2026-07-29",
+    "schema_version": 7,
+    "n_universe": 4475,
+    "n_investable": 2232
+  },
+  {
+    "date": "2026-07-30",
+    "schema_version": 8,
+    "n_universe": 4476,
+    "n_investable": 2229
+  },
+  {
+    "date": "2026-07-31",
+    "schema_version": 8,
+    "n_universe": 4473,
+    "n_investable": 2235
+  },
+  {
+    "date": "2026-08-03",
+    "schema_version": 8,
+    "n_universe": 4631,
+    "n_investable": 2300
+  },
+  {
+    "date": "2026-08-04",
+    "schema_version": 8,
+    "n_universe": 4482,
+    "n_investable": 2224
+  },
+  {
+    "date": "2026-08-05",
+    "schema_version": 8,
+    "n_universe": 4482,
+    "n_investable": 2228
+  },
+  {
+    "date": "2026-08-06",
+    "schema_version": 8,
+    "n_universe": 4484,
+    "n_investable": 2237
+  },
+  {
+    "date": "2026-08-07",
+    "schema_version": 8,
+    "n_universe": 4483,
+    "n_investable": 2238
+  },
+  {
+    "date": "2026-08-10",
+    "schema_version": 8,
+    "n_universe": 4631,
+    "n_investable": 2324
+  },
+  {
+    "date": "2026-08-11",
+    "schema_version": 8,
+    "n_universe": 4506,
+    "n_investable": 2243
+  },
+  {
+    "date": "2026-08-12",
+    "schema_version": 8,
+    "n_universe": 4502,
+    "n_investable": 2246
+  },
+  {
+    "date": "2026-08-13",
+    "schema_version": 8,
+    "n_universe": 4499,
+    "n_investable": 2235
+  },
+  {
+    "date": "2026-08-14",
+    "schema_version": 8,
+    "n_universe": 4504,
+    "n_investable": 2251
+  },
+  {
+    "date": "2026-08-17",
+    "schema_version": 8,
+    "n_universe": 4607,
+    "n_investable": 2378
+  },
+  {
+    "date": "2026-08-19",
+    "schema_version": 8,
+    "n_universe": 4506,
+    "n_investable": 2206
+  },
+  {
+    "date": "2026-08-20",
+    "schema_version": 8,
+    "n_universe": 4506,
+    "n_investable": 2215
+  },
+  {
+    "date": "2026-08-21",
+    "schema_version": 8,
+    "n_universe": 4505,
+    "n_investable": 2205
+  },
+  {
+    "date": "2026-08-24",
+    "schema_version": 8,
+    "n_universe": 4645,
+    "n_investable": 2296
+  },
+  {
+    "date": "2026-08-25",
+    "schema_version": 8,
+    "n_universe": 4505,
+    "n_investable": 2213
+  },
+  {
+    "date": "2026-08-26",
+    "schema_version": 8,
+    "n_universe": 4506,
+    "n_investable": 2214
+  },
+  {
+    "date": "2026-08-27",
+    "schema_version": 8,
+    "n_universe": 4507,
+    "n_investable": 2216
+  },
+  {
+    "date": "2026-08-28",
+    "schema_version": 8,
+    "n_universe": 4505,
+    "n_investable": 2206
+  },
+  {
+    "date": "2026-09-01",
+    "schema_version": 8,
+    "n_universe": 4502,
+    "n_investable": 2200
+  },
+  {
+    "date": "2026-09-02",
+    "schema_version": 8,
+    "n_universe": 4514,
+    "n_investable": 2221
+  },
+  {
+    "date": "2026-09-03",
+    "schema_version": 8,
+    "n_universe": 4309,
+    "n_investable": 2111
+  },
+  {
+    "date": "2026-09-07",
+    "schema_version": 8,
+    "n_universe": 4631,
+    "n_investable": 2287
+  },
+  {
+    "date": "2026-09-10",
+    "schema_version": 8,
+    "n_universe": 4521,
+    "n_investable": 2208
+  },
+  {
+    "date": "2026-09-15",
+    "schema_version": 8,
+    "n_universe": 4662,
+    "n_investable": 2296
+  },
+  {
+    "date": "2026-09-16",
+    "schema_version": 8,
+    "n_universe": 4538,
+    "n_investable": 2219
+  },
+  {
+    "date": "2026-09-18",
+    "schema_version": 8,
+    "n_universe": 4542,
+    "n_investable": 2214
+  },
+  {
+    "date": "2026-09-21",
+    "schema_version": 8,
+    "n_universe": 4671,
+    "n_investable": 2298
+  },
+  {
+    "date": "2026-09-22",
+    "schema_version": 8,
+    "n_universe": 4381,
+    "n_investable": 2153
+  },
+  {
+    "date": "2026-09-24",
+    "schema_version": 8,
+    "n_universe": 4380,
+    "n_investable": 2216
+  },
+  {
+    "date": "2026-09-25",
+    "schema_version": 8,
+    "n_universe": 4377,
+    "n_investable": 2222
+  },
+  {
+    "date": "2026-09-28",
+    "schema_version": 8,
+    "n_universe": 4387,
+    "n_investable": 2228
+  }
+]

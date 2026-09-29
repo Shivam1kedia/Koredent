@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+
+# Copyrighted books, kept out of the public repo; place them in the app folder locally
+The Intelligent Investor.pdf
+The Little Book That Still Beats the Market.pdf
+The Five Rules for Successful Stock Investing.pdf

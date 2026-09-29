@@ -1,0 +1,45 @@
+{
+  "status": "INSUFFICIENT_DATA",
+  "matured_cohorts": 0,
+  "snapshots_clean": 49,
+  "min_required": 1,
+  "horizon_trading_days": 63,
+  "benchmark": "NIFTYBEES.NS",
+  "generated": "2026-09-28T19:15:47",
+  "caveats": [
+    "Cross-sectional ladder: within a cohort all buckets share the same window, so a good/bad quarter lifts or sinks them together and cancels out of the high-minus-low spread.",
+    "Daily cohorts overlap ~62/63 days \u2014 they sharpen the estimate but are NOT independent. The band uses effective N = calendar span / horizon, not the raw cohort count.",
+    "Delisted names with no forward price are dropped and counted in n_missing; this biases surviving-bucket returns UPWARD.",
+    "Point-in-time snapshot => no current-list survivorship bias; residual is delisting only.",
+    "COSTS: *_net figures are net of modelled Zerodha equity-delivery costs at Rs 5,000 per position (0.53% round trip); *_net_small at Rs 500 (3.29%), which is what a minimum-SIP user across the 10-name ruin floor gets. The benchmark is netted as ONE Rs 75,000 ETF position, carrying one flat depository charge rather than fifteen. Position sizes pre-registered 2026-09-18 before any netted number was computed. Slippage and market impact are NOT modelled and are not zero, so every net figure here still flatters the strategy.",
+    "Gross figures are the raw measurement and are reported unchanged alongside the net ones; costs are an assumption layered on top."
+  ],
+  "cost_assumption": {
+    "rates_verified": "2026-09-18",
+    "position_base_inr": 5000.0,
+    "position_base_round_trip_pct": 0.529,
+    "position_sensitivity_inr": 500.0,
+    "position_sensitivity_round_trip_pct": 3.29,
+    "benchmark_position_inr": 75000.0,
+    "slippage_modelled": false,
+    "pre_registered": "2026-09-18"
+  },
+  "ladder": {},
+  "ladder_monotonic": null,
+  "independent_quarters": 0,
+  "spread_high_minus_low": {
+    "definition": "mean(buckets 4,5) - mean(buckets 0,1) forward return",
+    "point": null,
+    "ci95": null,
+    "n_cohorts": 0,
+    "independent_quarters": 0
+  },
+  "spread_high_minus_low_net": {
+    "definition": "same spread, net of costs at Rs 5,000 per position",
+    "point": null,
+    "ci95": null,
+    "n_cohorts": 0,
+    "independent_quarters": 0
+  },
+  "first_reading_date": "2026-10-09"
+}
