@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<body>
+<p>Signing you in...</p>
+<script>
+  // Tokens come back in the URL FRAGMENT (#...). The picks a user selected
+  // before signing in were carried on redirect_to's QUERY STRING (?picks=...),
+  // which Supabase preserves — so read the fragment for tokens and this page's
+  // own query string for picks, then forward BOTH to the app.
+  var params = new URLSearchParams(window.location.hash.substring(1));
+  var at = params.get('access_token');
+  var rt = params.get('refresh_token');
+  var picks = new URLSearchParams(window.location.search).get('picks');
+  if (at) {
+    var url = 'https://kordent.streamlit.app/?access_token=' + encodeURIComponent(at) +
+              '&refresh_token=' + encodeURIComponent(rt);
+    if (picks) { url += '&picks=' + encodeURIComponent(picks); }
+    window.location.replace(url);
+  } else {
+    document.body.innerText = 'Login failed — no token received.';
+  }
+</script>
+</body>
+</html>

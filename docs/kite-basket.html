@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Redirecting to Kite...</title>
+    <style>
+        body { font-family: system-ui; display: flex; justify-content: center;
+               align-items: center; height: 100vh; margin: 0; color: #374151; }
+    </style>
+</head>
+<body>
+    <p>Opening Kite...</p>
+    <form id="kf" method="post" action="https://kite.zerodha.com/connect/basket" target="_self">
+        <input type="hidden" name="api_key" id="ak" />
+        <input type="hidden" name="data" id="dt" />
+    </form>
+    <script>
+        var p = new URLSearchParams(window.location.search);
+        var ak = p.get('api_key');
+        var dt = p.get('data');
+        if (ak && dt) {
+            document.getElementById('ak').value = ak;
+            document.getElementById('dt').value = dt;
+            document.getElementById('kf').submit();
+        } else {
+            document.body.innerHTML = '<p>Missing parameters. Please try again from Kordent.</p>';
+        }
+    </script>
+</body>
+</html>
