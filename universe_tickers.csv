@@ -413,6 +413,7 @@ ticker,name,exchange,yf_symbol
 517063.BO,JETKING INFOTRAIN LTD.,BSE,JETKINGQ.BO
 517096.BO,APLAB LTD.,BSE,APLAB.BO
 517119.BO,PCS TECHNOLOGY LTD.,BSE,PCS.BO
+517166.BO,SPEL SEMICONDUCTOR LTD.,BSE,SPELS.BO
 517170.BO,Edvenswa Enterprises Limited,BSE,EDVENSWA.BO
 517201.BO,SWITCHING TECHNOLOGIES GUNTHER,BSE,SWITCHTE.BO
 517236.BO,CALCOM VISION LTD.,BSE,CALCOM.BO
@@ -1074,6 +1075,7 @@ ticker,name,exchange,yf_symbol
 531925.BO,SHANTANU SHEOREY AQUAKULT LTD.,BSE,SHAQUAK.BO
 531929.BO,INNOCORP LTD.,BSE,INNOCORP.BO
 531930.BO,SARTHAK INDUSTRIES LTD.,BSE,SARTHAKIND.BO
+531936.BO,BLUE CHIP INDIA LTD.,BSE,BLUECHIP.BO
 531944.BO,SERVOTEACH INDUSTRIES LTD,BSE,SERVOTEACH.BO
 531950.BO,VERTEX SECURITIES LTD.,BSE,VERTEX.BO
 531952.BO,RIBA TEXTILES LTD.,BSE,RIBATEX.BO
@@ -1138,6 +1140,7 @@ ticker,name,exchange,yf_symbol
 532397.BO,KONNDOR INDUSTRIES LIMITED,BSE,KONNDOR.BO
 532402.BO,USG TECH SOLUTIONS LTD.,BSE,USGTECH.BO
 532404.BO,SAVEN TECHNOLOGIES LTD.,BSE,7TEC.BO
+532413.BO,CEREBRA INTEGRATED TECHNOLOGIE,BSE,CEREBRAINT.BO
 532425.BO,GENUS PRIME INFRA LIMITED,BSE,GENUSPRIME.BO
 532435.BO,SANMIT INFRA LIMITED,BSE,SANINFRA.BO
 532444.BO,T.SPIRITUAL WORLD LTD.,BSE,TSPIRITUAL.BO
@@ -1164,6 +1167,7 @@ ticker,name,exchange,yf_symbol
 532829.BO,LEHAR FOOTWEARS LIMITED,BSE,LEHAR.BO
 532855.BO,HARYANA CAPFIN LTD.,BSE,HARYNACAP.BO
 532879.BO,SIR SHADI LAL ENTERPRISES LTD.,BSE,SSLEL.BO
+532886.BO,SEL MANUFACTURING COMPANY LTD.,BSE,SELMC.BO
 532911.BO,PARLE INDUSTRIES LIMITED,BSE,PARLEIND.BO
 532918.BO,RATHI BARS LTD.,BSE,RATHIBAR.BO
 532933.BO,PORWAL AUTO COMPONENTS LTD.,BSE,PORWAL.BO
@@ -1454,6 +1458,7 @@ ticker,name,exchange,yf_symbol
 539835.BO,Superior Finlease Limited,BSE,SUPERIOR.BO
 539884.BO,Darshan Orna Limited,BSE,DARSHANORNA.BO
 539911.BO,Svarnim Trade Udyog Limited,BSE,SNIM.BO
+539917.BO,NAGARJUNA FERTILIZERS AND CHEM,BSE,NAGAFERT.BO
 539938.BO,Medico Intercontinental Limite,BSE,MIL.BO
 539939.BO,Yash Chemex Limited,BSE,YASHCHEM.BO
 539945.BO,ICICI Prudential NV20 ETF,BSE,NV20IETF.BO
@@ -1525,6 +1530,7 @@ ticker,name,exchange,yf_symbol
 540693.BO,Shish Industries Limited,BSE,SHISHIND.BO
 540694.BO,ANG Lifesciences India Limited,BSE,ANG.BO
 540696.BO,KCD INDUSTRIES INDIA LIMITED,BSE,KCDGROUP.BO
+540702.BO,Lasa Supergenerics Limited,BSE,LASA.BO
 540703.BO,PRO CLB GLOBAL LIMITED,BSE,PROCLB.BO
 540715.BO,Sagar Diamonds Limited,BSE,SAGAR.BO
 540717.BO,Polo Queen Industrial and Fint,BSE,PQIF.BO
@@ -2287,6 +2293,7 @@ ADDIND.NS,Addi Industries Limited,NSE,ADDIND.NS
 ADFFOODS.NS,ADF Foods Limited,NSE,ADFFOODS.NS
 ADL.NS,Archidply Decor Limited,NSE,ADL.NS
 ADOR.NS,Ador Welding Limited,NSE,ADOR.NS
+ADROITIND.NS,Adroit Industries (India) Limited,NSE,ADROITIND.NS
 ADROITINFO.NS,Adroit Infotech Limited,NSE,ADROITINFO.NS
 ADSL.NS,Allied Digital Services Limited,NSE,ADSL.NS
 ADVAIT.NS,Advait Energy Transitions Limited,NSE,ADVAIT.NS
@@ -2420,6 +2427,7 @@ ARIHANTSUP.NS,Arihant Superstructures Limited,NSE,ARIHANTSUP.NS
 ARIS.NS,Arisinfra Solutions Limited,NSE,ARIS.NS
 ARKADE.NS,Arkade Developers Limited,NSE,ARKADE.NS
 ARMANFIN.NS,Arman Financial Services Limited,NSE,ARMANFIN.NS
+ARMEE.NS,ArMee Infotech Limited,NSE,ARMEE.NS
 AROGRANITE.NS,Aro Granite Industries Limited,NSE,AROGRANITE.NS
 ARROWGREEN.NS,Arrow Greentech Limited,NSE,ARROWGREEN.NS
 ARSHIYA.NS,Arshiya Limited,NSE,ARSHIYA.NS
@@ -2564,7 +2572,6 @@ BESTAGRO.NS,Best Agrolife Limited,NSE,BESTAGRO.NS
 BETA.NS,Beta Drugs Limited,NSE,BETA.NS
 BFINVEST.NS,BF Investment Limited,NSE,BFINVEST.NS
 BFUTILITIE.NS,BF Utilities Limited,NSE,BFUTILITIE.NS
-BGLOBAL.NS,Bharatiya Global Infomedia Limited,NSE,BGLOBAL.NS
 BGRENERGY.NS,BGR Energy Systems Limited,NSE,BGRENERGY.NS
 BHAGCHEM.NS,Bhagiradha Chemicals & Industries Limited,NSE,BHAGCHEM.NS
 BHAGERIA.NS,Bhageria Industries Limited,NSE,BHAGERIA.NS
@@ -2602,7 +2609,6 @@ BLISSGVS.NS,Bliss GVS Pharma Limited,NSE,BLISSGVS.NS
 BLKASHYAP.NS,B. L. Kashyap and Sons Limited,NSE,BLKASHYAP.NS
 BLS.NS,BLS International Services Limited,NSE,BLS.NS
 BLSE.NS,BLS E-Services Limited,NSE,BLSE.NS
-BLUECHIP.NS,Blue Chip India Limited,NSE,BLUECHIP.NS
 BLUECLOUDS.NS,Blue Cloud Softech Solutions Limited,NSE,BLUECLOUDS.NS
 BLUECOAST.NS,Blue Coast Hotels Limited,NSE,BLUECOAST.NS
 BLUEDART.NS,Blue Dart Express Limited,NSE,BLUEDART.NS
@@ -2682,7 +2688,6 @@ CENTRUM.NS,Centrum Capital Limited,NSE,CENTRUM.NS
 CENTUM.NS,Centum Electronics Limited,NSE,CENTUM.NS
 CENTURYPLY.NS,Century Plyboards (India) Limited,NSE,CENTURYPLY.NS
 CERA.NS,Cera Sanitaryware Limited,NSE,CERA.NS
-CEREBRAINT.NS,Cerebra Integrated Technologies Limited,NSE,CEREBRAINT.NS
 CESC.NS,CESC Limited,NSE,CESC.NS
 CEWATER.NS,Concord Enviro Systems Limited,NSE,CEWATER.NS
 CFEL.NS,Confidence Futuristic Energetech Limited,NSE,CFEL.NS
@@ -2707,12 +2712,10 @@ CIFL.NS,Capital India Finance Limited,NSE,CIFL.NS
 CINELINE.NS,Cineline India Limited,NSE,CINELINE.NS
 CINEVISTA.NS,Cinevista Limited,NSE,CINEVISTA.NS
 CIPLA.NS,Cipla Limited,NSE,CIPLA.NS
-CLCIND.NS,CLC Industries Limited,NSE,CLCIND.NS
 CLEAN.NS,Clean Science and Technology Limited,NSE,CLEAN.NS
 CLEANMAX.NS,Clean Max Enviro Energy Solutions Limited,NSE,CLEANMAX.NS
 CLEDUCATE.NS,CL Educate Limited,NSE,CLEDUCATE.NS
 CLSEL.NS,Chaman Lal Setia Exports Limited,NSE,CLSEL.NS
-CMICABLES.NS,CMI Limited,NSE,CMICABLES.NS
 CMLL.NS,Caliber Mining and Logistics Limited,NSE,CMLL.NS
 CMPDI.NS,Central Mine Planning & Design Institute Limited,NSE,CMPDI.NS
 CMRGREEN.NS,CMR Green Technologies Limited,NSE,CMRGREEN.NS
@@ -2884,7 +2887,6 @@ ECLERX.NS,eClerx Services Limited,NSE,ECLERX.NS
 ECORECO.NS,Eco Recycling Limited,NSE,ECORECO.NS
 ECOSMOBLTY.NS,Ecos (India) Mobility & Hospitality Limited,NSE,ECOSMOBLTY.NS
 EDELWEISS.NS,Edelweiss Financial Services Limited,NSE,EDELWEISS.NS
-EDUCOMP.NS,Educomp Solutions Limited,NSE,EDUCOMP.NS
 EFCIL.NS,EFC (I) Limited,NSE,EFCIL.NS
 EICHERMOT.NS,Eicher Motors Limited,NSE,EICHERMOT.NS
 EIDPARRY.NS,EID Parry India Limited,NSE,EIDPARRY.NS
@@ -2901,6 +2903,7 @@ ELDEHSG.NS,Eldeco Housing And Industries Limited,NSE,ELDEHSG.NS
 ELECON.NS,Elecon Engineering Company Limited,NSE,ELECON.NS
 ELECTCAST.NS,Electrosteel Castings Limited,NSE,ELECTCAST.NS
 ELECTHERM.NS,Electrotherm (India) Limited,NSE,ELECTHERM.NS
+ELEVATE.NS,Elevate Campuses Limited,NSE,ELEVATE.NS
 ELGIEQUIP.NS,Elgi Equipments Limited,NSE,ELGIEQUIP.NS
 ELGIRUBCO.NS,Elgi Rubber Company Limited,NSE,ELGIRUBCO.NS
 ELIN.NS,Elin Electronics Limited,NSE,ELIN.NS
@@ -3114,6 +3117,7 @@ GRWRHITECH.NS,Garware Hi-Tech Films Limited,NSE,GRWRHITECH.NS
 GSFC.NS,Gujarat State Fertilizers & Chemicals Limited,NSE,GSFC.NS
 GSLSU.NS,Global Surfaces Limited,NSE,GSLSU.NS
 GSPCROP.NS,GSP Crop Science Limited,NSE,GSPCROP.NS
+GSPLTRANS.NS,GSPL Transmission Limited,NSE,GSPLTRANS.NS
 GSS.NS,GSS Infotech Limited,NSE,GSS.NS
 GTECJAINX.NS,G-TEC JAINX EDUCATION LIMITED,NSE,GTECJAINX.NS
 GTL.NS,GTL Limited,NSE,GTL.NS
@@ -3533,7 +3537,6 @@ LANCORHOL.NS,Lancor Holdings Limited,NSE,LANCORHOL.NS
 LANDMARK.NS,Landmark Cars Limited,NSE,LANDMARK.NS
 LANDSMILL.NS,Landsmill Green Limited,NSE,LANDSMILL.NS
 LAOPALA.NS,La Opala RG Limited,NSE,LAOPALA.NS
-LASA.NS,Lasa Supergenerics Limited,NSE,LASA.NS
 LASERPOWER.NS,Laser Power & Infra Limited,NSE,LASERPOWER.NS
 LATENTVIEW.NS,Latent View Analytics Limited,NSE,LATENTVIEW.NS
 LATTEYS.NS,Latteys Industries Limited,NSE,LATTEYS.NS
@@ -3723,7 +3726,6 @@ MOMSBELIEF.NS,Rays of Belief Limited,NSE,MOMSBELIEF.NS
 MONARCH.NS,Monarch Networth Capital Limited,NSE,MONARCH.NS
 MONEYBOXX.NS,Moneyboxx Finance Limited,NSE,MONEYBOXX.NS
 MONTECARLO.NS,Monte Carlo Fashions Limited,NSE,MONTECARLO.NS
-MORARJEE.NS,Morarjee Textiles Limited,NSE,MORARJEE.NS
 MOREPENLAB.NS,Morepen Laboratories Limited,NSE,MOREPENLAB.NS
 MOSCHIP.NS,Moschip Technologies Limited,NSE,MOSCHIP.NS
 MOTHERSON.NS,Samvardhana Motherson International Limited,NSE,MOTHERSON.NS
@@ -3760,7 +3762,6 @@ MVGJL.NS,Manoj Vaibhav Gems N Jewellers Limited,NSE,MVGJL.NS
 MWL.NS,Mangalam Worldwide Limited,NSE,MWL.NS
 MYSORPETRO.NS,Mysore Petro Chemicals Limited,NSE,MYSORPETRO.NS
 NACLIND.NS,NACL Industries Limited,NSE,NACLIND.NS
-NAGAFERT.NS,Nagarjuna Fertilizers and Chemicals Limited,NSE,NAGAFERT.NS
 NAGREEKCAP.NS,Nagreeka Capital & Infrastructure Limited,NSE,NAGREEKCAP.NS
 NAGREEKEXP.NS,Nagreeka Exports Limited,NSE,NAGREEKEXP.NS
 NAHARCAP.NS,Nahar Capital and Financial Services Limited,NSE,NAHARCAP.NS
@@ -3898,7 +3899,6 @@ ORIENTTECH.NS,Orient Technologies Limited,NSE,ORIENTTECH.NS
 ORIRAIL.NS,Oriental Rail Infrastructure Limited,NSE,ORIRAIL.NS
 ORISSAMINE.NS,The Orissa Minerals Development Company Limited,NSE,ORISSAMINE.NS
 ORKLAINDIA.NS,Orkla India Limited,NSE,ORKLAINDIA.NS
-ORTEL.NS,Ortel Communications Limited,NSE,ORTEL.NS
 ORTINGLOBE.NS,ORTIN GLOBAL LIMITED,NSE,ORTINGLOBE.NS
 OSIAHYPER.NS,Osia Hyper Retail Limited,NSE,OSIAHYPER.NS
 OSWALAGRO.NS,Oswal Agro Mills Limited,NSE,OSWALAGRO.NS
@@ -4073,7 +4073,6 @@ RAJRATAN.NS,Rajratan Global Wire Limited,NSE,RAJRATAN.NS
 RAJRILTD.NS,Raj Rayon Industries Limited,NSE,RAJRILTD.NS
 RAJSREESUG.NS,Rajshree Sugars & Chemicals Limited,NSE,RAJSREESUG.NS
 RAJTV.NS,Raj Television Network Limited,NSE,RAJTV.NS
-RAJVIR.NS,Rajvir Industries Limited,NSE,RAJVIR.NS
 RALLIS.NS,Rallis India Limited,NSE,RALLIS.NS
 RAMANEWS.NS,Shree Rama Newsprint Limited,NSE,RAMANEWS.NS
 RAMAPHO.NS,Rama Phosphates Limited,NSE,RAMAPHO.NS
@@ -4253,7 +4252,6 @@ SEDEMAC.NS,SEDEMAC Mechatronics Limited,NSE,SEDEMAC.NS
 SEIL.NS,Shanti Educational Initiatives Limited,NSE,SEIL.NS
 SEJALLTD.NS,Sejal Glass Limited,NSE,SEJALLTD.NS
 SEKURITIND.NS,Saint Gobain Sekurit India Limited,NSE,SEKURITIND.NS
-SELMC.NS,SEL Manufacturing Company Limited,NSE,SELMC.NS
 SEMAC.NS,Semac Construction Limited,NSE,SEMAC.NS
 SENCO.NS,Senco Gold Limited,NSE,SENCO.NS
 SENORES.NS,Senores Pharmaceuticals Limited,NSE,SENORES.NS
@@ -4355,7 +4353,6 @@ SJS.NS,S.J.S. Enterprises Limited,NSE,SJS.NS
 SJVN.NS,SJVN Limited,NSE,SJVN.NS
 SKFINDIA.NS,SKF India Limited,NSE,SKFINDIA.NS
 SKFINDUS.NS,SKF India (Industrial) Limited,NSE,SKFINDUS.NS
-SKIL.NS,SKIL Infrastructure Limited,NSE,SKIL.NS
 SKIPPER.NS,Skipper Limited,NSE,SKIPPER.NS
 SKMEGGPROD.NS,SKM Egg Products Export (India) Limited,NSE,SKMEGGPROD.NS
 SKYGOLD.NS,SKY GOLD AND DIAMONDS LIMITED,NSE,SKYGOLD.NS
@@ -4390,7 +4387,6 @@ SPARC.NS,Sun Pharma Advanced Research Company Limited,NSE,SPARC.NS
 SPCENET.NS,Spacenet Enterprises India Limited,NSE,SPCENET.NS
 SPECIALITY.NS,Speciality Restaurants Limited,NSE,SPECIALITY.NS
 SPECTRUM.NS,Spectrum Electrical Industries Limited,NSE,SPECTRUM.NS
-SPELS.NS,SPEL Semiconductor Limited,NSE,SPELS.NS
 SPENCERS.NS,Spencer's Retail Limited,NSE,SPENCERS.NS
 SPIC.NS,Southern Petrochemicals Industries Corporation  Limited,NSE,SPIC.NS
 SPLIL.NS,SPL Industries Limited,NSE,SPLIL.NS
@@ -4488,6 +4484,7 @@ SWANDEF.NS,Swan Defence and Heavy Industries Limited,NSE,SWANDEF.NS
 SWARAJ.NS,Swaraj Suiting Limited,NSE,SWARAJ.NS
 SWARAJENG.NS,Swaraj Engines Limited,NSE,SWARAJENG.NS
 SWARNSAR.NS,Swarnsarita Jewels India Limited,NSE,SWARNSAR.NS
+SWASTIKAIN.NS,Swastika Infra Limited,NSE,SWASTIKAIN.NS
 SWELECTES.NS,Swelect Energy Systems Limited,NSE,SWELECTES.NS
 SWIGGY.NS,Swiggy Limited,NSE,SWIGGY.NS
 SWISSMLTRY.NS,Swiss Military Consumer Goods Limited,NSE,SWISSMLTRY.NS
@@ -4657,7 +4654,6 @@ UNITDSPR.NS,United Spirits Limited,NSE,UNITDSPR.NS
 UNITECH.NS,Unitech Limited,NSE,UNITECH.NS
 UNITEDPOLY.NS,United Polyfab Gujarat Limited,NSE,UNITEDPOLY.NS
 UNITEDTEA.NS,The United Nilgiri Tea Estates Company Limited,NSE,UNITEDTEA.NS
-UNIVAFOODS.NS,Univa Foods Limited,NSE,UNIVAFOODS.NS
 UNIVASTU.NS,Univastu India Limited,NSE,UNIVASTU.NS
 UNIVCABLES.NS,Universal Cables Limited,NSE,UNIVCABLES.NS
 UNIVPHOTO.NS,Universus Photo Imagings Limited,NSE,UNIVPHOTO.NS
@@ -4685,6 +4681,7 @@ VALIANTORG.NS,Valiant Organics Limited,NSE,VALIANTORG.NS
 VAML.NS,Vedanta Aluminium Metal Limited,NSE,VAML.NS
 VARDHACRLC.NS,Vardhman Acrylics Limited,NSE,VARDHACRLC.NS
 VARDMNPOLY.NS,Vardhman Polytex Limited,NSE,VARDMNPOLY.NS
+VARMORA.NS,Varmora Granito Limited,NSE,VARMORA.NS
 VARROC.NS,Varroc Engineering Limited,NSE,VARROC.NS
 VASCONEQ.NS,Vascon Engineers Limited,NSE,VASCONEQ.NS
 VASUPRADA.NS,Shri Vasuprada Plantations Limited,NSE,VASUPRADA.NS
