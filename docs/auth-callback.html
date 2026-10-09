@@ -12,7 +12,7 @@
   var rt = params.get('refresh_token');
   var picks = new URLSearchParams(window.location.search).get('picks');
   if (at) {
-    var url = 'https://kordent.streamlit.app/?access_token=' + encodeURIComponent(at) +
+    var url = 'https://shivam1kedia.streamlit.app/?access_token=' + encodeURIComponent(at) +
               '&refresh_token=' + encodeURIComponent(rt);
     if (picks) { url += '&picks=' + encodeURIComponent(picks); }
     window.location.replace(url);
