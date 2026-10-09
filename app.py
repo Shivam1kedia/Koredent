@@ -352,7 +352,7 @@ def record_withdrawal(sb, portfolio, user_id, amount_inr):
     }).execute()
 
 
-KITE_RELAY_URL = "https://aakash10867.github.io/graham-agent/kite-basket.html"
+KITE_RELAY_URL = "https://shivam1kedia.github.io/Koredent/kite-basket.html"
 
 def kite_buy_url(ticker, quantity=1, order_type="MARKET"):
     """Single stock Kite Publisher URL via GitHub Pages relay (POST required by Kite)."""
@@ -3662,7 +3662,7 @@ with st.sidebar:
     # ── Auth ──
     if st.session_state.sb_user_email is None:
         import urllib.parse as _url
-        _cb = "https://aakash10867.github.io/graham-agent/auth-callback.html"
+        _cb = "https://shivam1kedia.github.io/Koredent/auth-callback.html"
         _sp = st.session_state.get("_screen_pending")
         if _sp:
             _cb += "?picks=" + _url.quote(",".join(_sp))
