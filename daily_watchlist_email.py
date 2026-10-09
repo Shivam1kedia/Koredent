@@ -38,7 +38,7 @@ except Exception:
     selector = None
 
 
-APP_URL = "https://kordent.streamlit.app"
+APP_URL = "https://shivam1kedia.streamlit.app"
 GEMINI_MODELS = [
     "gemini-3.5-flash-lite",
     "gemini-3.8-flash",

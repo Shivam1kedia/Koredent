@@ -28,7 +28,7 @@ except Exception:
 
 BOT_TOKEN = os.environ.get("TELEGRAM_BOT_TOKEN", "")
 BASE_URL = f"https://api.telegram.org/bot{BOT_TOKEN}"
-APP_URL = "https://kordent.streamlit.app"
+APP_URL = "https://shivam1kedia.streamlit.app"
 
 
 def _html_esc(text):

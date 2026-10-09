@@ -1104,17 +1104,17 @@ def run_daily_tracker():
                     # Day-before reminder
                     _msg = f"Tomorrow is your review day for {_pname}. Prepare to assess performance, rebalance, and decide on any changes."
                     if _tg_token and user_id in _tg_map:
-                        send_telegram(_tg_map[user_id], f"📅 <b>{_html_esc(_uname)}, review tomorrow</b>\n\n{_html_esc(_msg)}\n\n<a href='https://kordent.streamlit.app'>Open Kordent</a>", _tg_token)
+                        send_telegram(_tg_map[user_id], f"📅 <b>{_html_esc(_uname)}, review tomorrow</b>\n\n{_html_esc(_msg)}\n\n<a href='https://shivam1kedia.streamlit.app'>Open Kordent</a>", _tg_token)
                     if _uemail and _smtp_user and _smtp_pass:
-                        send_review_email(_uemail, f"📅 {_uname}, your {_pname} review is tomorrow", f"{_uname},\n\n{_msg}\n\nOpen Kordent: https://kordent.streamlit.app\n\n— Kordent", _smtp_user, _smtp_pass)
+                        send_review_email(_uemail, f"📅 {_uname}, your {_pname} review is tomorrow", f"{_uname},\n\n{_msg}\n\nOpen Kordent: https://shivam1kedia.streamlit.app\n\n— Kordent", _smtp_user, _smtp_pass)
 
                 elif rd == date.today():
                     # Day-of reminder
                     _msg = f"Your review for {_pname} is due today. Open Kordent to run your review."
                     if _tg_token and user_id in _tg_map:
-                        send_telegram(_tg_map[user_id], f"🔔 <b>{_html_esc(_uname)}, review day!</b>\n\n{_html_esc(_msg)}\n\n<a href='https://kordent.streamlit.app'>Open Kordent</a>", _tg_token)
+                        send_telegram(_tg_map[user_id], f"🔔 <b>{_html_esc(_uname)}, review day!</b>\n\n{_html_esc(_msg)}\n\n<a href='https://shivam1kedia.streamlit.app'>Open Kordent</a>", _tg_token)
                     if _uemail and _smtp_user and _smtp_pass:
-                        send_review_email(_uemail, f"🔔 {_uname}, your {_pname} review is today", f"{_uname},\n\n{_msg}\n\nOpen Kordent: https://kordent.streamlit.app\n\n— Kordent", _smtp_user, _smtp_pass)
+                        send_review_email(_uemail, f"🔔 {_uname}, your {_pname} review is today", f"{_uname},\n\n{_msg}\n\nOpen Kordent: https://shivam1kedia.streamlit.app\n\n— Kordent", _smtp_user, _smtp_pass)
 
                 elif rd < date.today():
                     # Overdue — store as alert for weekly mentor
@@ -1199,7 +1199,7 @@ def run_daily_tracker():
                     "score_drop", severity=_drift["severity"]
                 ))
                 if _tg_token and user_id in _tg_map:
-                    send_telegram(_tg_map[user_id], f"⚠️ <b>{_html_esc(_dd_headline)}</b>\n\n<a href='https://kordent.streamlit.app'>Open Kordent</a>", _tg_token)
+                    send_telegram(_tg_map[user_id], f"⚠️ <b>{_html_esc(_dd_headline)}</b>\n\n<a href='https://shivam1kedia.streamlit.app'>Open Kordent</a>", _tg_token)
 
             if not quality_pass:
                 _qf_headline = f"{holding.get('name', ticker)} flagged as potential value trap"
@@ -1209,7 +1209,7 @@ def run_daily_tracker():
                     "quality_fail", severity="danger"
                 ))
                 if _tg_token and user_id in _tg_map:
-                    send_telegram(_tg_map[user_id], f"⚠️ <b>{_html_esc(_qf_headline)}</b>\n\n<a href='https://kordent.streamlit.app'>Open Kordent</a>", _tg_token)
+                    send_telegram(_tg_map[user_id], f"⚠️ <b>{_html_esc(_qf_headline)}</b>\n\n<a href='https://shivam1kedia.streamlit.app'>Open Kordent</a>", _tg_token)
 
             if entry_price > 0:
                 stock_return = ((live_price - entry_price) / entry_price) * 100
@@ -1223,7 +1223,7 @@ def run_daily_tracker():
                         "price_crash", severity="danger"
                     ))
                     if _tg_token and user_id in _tg_map:
-                        send_telegram(_tg_map[user_id], f"⚠️ <b>{_html_esc(_pc_headline)}</b>\n\n<a href='https://kordent.streamlit.app'>Open Kordent</a>", _tg_token)
+                        send_telegram(_tg_map[user_id], f"⚠️ <b>{_html_esc(_pc_headline)}</b>\n\n<a href='https://shivam1kedia.streamlit.app'>Open Kordent</a>", _tg_token)
 
         # `overvalued` removed. It fired on naked PE>18 / PB>1.8 — IPS-blind
         # thresholds that ignore sector, growth and the user's own mandate, and
@@ -1880,7 +1880,7 @@ def run_daily_tracker():
                     if sip > 0:
                         lines.append(f"📅 SIP due: Rs. {sip:,.0f} for <b>{_html_esc(p['name'])}</b>")
  
-            lines.append(f"\n<a href='https://kordent.streamlit.app'>Open Kordent</a>")
+            lines.append(f"\n<a href='https://shivam1kedia.streamlit.app'>Open Kordent</a>")
             send_telegram(chat_id, "\n".join(lines), _tg_token)
             _tg_sent += 1
  

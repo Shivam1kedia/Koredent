@@ -45,7 +45,7 @@ def send_telegram(chat_id, text, bot_token):
     except Exception as e:
         print(f"  Telegram send failed: {e}")
  
-APP_URL = "https://kordent.streamlit.app"
+APP_URL = "https://shivam1kedia.streamlit.app"
 GEMINI_MODELS = [
     "gemini-3.5-flash-lite",
     "gemini-3.8-flash",
