@@ -123,11 +123,11 @@ def get_sector_momentum(_sectors_tuple):
 # FREE MODEL FALLBACK LIST
 # ──────────────────────────────────────────────
 FREE_MODELS = [
-    "gemini-2.5-flash-lite",
-    "gemini-2.5-flash",
+    "gemini-3.5-flash-lite",
+    "gemini-3.8-flash",
+    "gemini-3.6-flash",
     "gemini-3.5-flash",
     "gemini-3.1-flash-lite",
-    "gemini-2.5-pro",
     "gemini-3.1-pro-preview",
 ]
 
@@ -1430,7 +1430,7 @@ PORTFOLIO ASSESSMENT
                 return response.text
             except Exception as e:
                 error_msg = str(e).upper()
-                if any(err in error_msg for err in ["429", "RESOURCE_EXHAUSTED", "503", "UNAVAILABLE", "500"]):
+                if any(err in error_msg for err in ["429", "RESOURCE_EXHAUSTED", "503", "UNAVAILABLE", "500", "404", "NOT_FOUND"]):
                     continue
                 raise e
         return "Analysis unavailable — all models rate-limited."
@@ -1704,7 +1704,7 @@ Only include actions for holdings that need changes. Do not include "investigate
                 break
             except Exception as e:
                 error_msg = str(e).upper()
-                if any(err in error_msg for err in ["429", "RESOURCE_EXHAUSTED", "503", "UNAVAILABLE", "500"]):
+                if any(err in error_msg for err in ["429", "RESOURCE_EXHAUSTED", "503", "UNAVAILABLE", "500", "404", "NOT_FOUND"]):
                     continue
                 break
     except Exception:
@@ -2173,7 +2173,7 @@ def generate_review_recommendations(enriched_holdings, investor_type, time_horiz
             continue
         except Exception as e:
             error_msg = str(e).upper()
-            if any(err in error_msg for err in ["429", "RESOURCE_EXHAUSTED", "503", "UNAVAILABLE", "500"]):
+            if any(err in error_msg for err in ["429", "RESOURCE_EXHAUSTED", "503", "UNAVAILABLE", "500", "404", "NOT_FOUND"]):
                 continue
             break
     return None
@@ -5433,7 +5433,7 @@ def get_web_context(query: str) -> dict:
             pass  # fall through to Gemini fallback
 
     # ── Fallback: Gemini google_search grounding (only search-capable models) ──
-    SEARCH_MODELS = ["gemini-2.5-flash", "gemini-2.5-pro"]
+    SEARCH_MODELS = ["gemini-3.8-flash", "gemini-3.5-flash"]
     client = genai.Client(api_key=st.secrets["GEMINI_API_KEY"])
 
     search_prompt = f'''Search the web and provide a concise summary of the most recent and material information for this query:
@@ -6421,7 +6421,7 @@ def intercept_and_rewrite_query(user_query: str) -> str:
                 return f"SYSTEM DIRECTIVE (Translated Intent): {response.text}"
             except Exception as inner_e:
                 error_msg = str(inner_e).upper()
-                if any(err in error_msg for err in ["429", "RESOURCE_EXHAUSTED", "503", "UNAVAILABLE", "500"]):
+                if any(err in error_msg for err in ["429", "RESOURCE_EXHAUSTED", "503", "UNAVAILABLE", "500", "404", "NOT_FOUND"]):
                     continue
                 raise inner_e
         return user_query
@@ -6634,7 +6634,7 @@ def agent_turn(user_message, status_container=None):
         except Exception as e:
             last_error = str(e)
             error_upper = last_error.upper()
-            if any(err in error_upper for err in ["429", "RESOURCE_EXHAUSTED", "503", "UNAVAILABLE", "500"]):
+            if any(err in error_upper for err in ["429", "RESOURCE_EXHAUSTED", "503", "UNAVAILABLE", "500", "404", "NOT_FOUND"]):
                 continue
             raise e
 
@@ -9600,7 +9600,7 @@ elif st.session_state.sb_view_mode == "portfolios":
                                                         break
                                                     except Exception as e:
                                                         error_msg = str(e).upper()
-                                                        if any(err in error_msg for err in ["429", "RESOURCE_EXHAUSTED", "503", "UNAVAILABLE", "500"]):
+                                                        if any(err in error_msg for err in ["429", "RESOURCE_EXHAUSTED", "503", "UNAVAILABLE", "500", "404", "NOT_FOUND"]):
                                                             continue
                                                         break
                                             except Exception as e:
@@ -10258,7 +10258,7 @@ elif st.session_state.sb_view_mode == "portfolios":
                                                         break
                                                     except Exception as e:
                                                         error_msg = str(e).upper()
-                                                        if any(err in error_msg for err in ["429", "RESOURCE_EXHAUSTED", "503", "UNAVAILABLE", "500"]):
+                                                        if any(err in error_msg for err in ["429", "RESOURCE_EXHAUSTED", "503", "UNAVAILABLE", "500", "404", "NOT_FOUND"]):
                                                             continue
                                                         break
                                             except Exception as e:

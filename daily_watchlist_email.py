@@ -40,11 +40,11 @@ except Exception:
 
 APP_URL = "https://kordent.streamlit.app"
 GEMINI_MODELS = [
-    "gemini-2.5-flash-lite",
-    "gemini-2.5-flash",
+    "gemini-3.5-flash-lite",
+    "gemini-3.8-flash",
+    "gemini-3.6-flash",
     "gemini-3.5-flash",
     "gemini-3.1-flash-lite",
-    "gemini-2.5-pro",
     "gemini-3.1-pro-preview",
 ]
 
@@ -302,8 +302,8 @@ def call_gemini(prompt, gemini_key):
             if response.text:
                 return response.text.strip()
         except Exception as e:
-            if "429" in str(e) or "RESOURCE_EXHAUSTED" in str(e):
-                print(f"  {model} rate-limited, trying next...")
+            if any(k in str(e) for k in ("429", "RESOURCE_EXHAUSTED", "404", "NOT_FOUND", "503", "UNAVAILABLE")):
+                print(f"  {model} unavailable or rate-limited, trying next...")
                 continue
             print(f"  {model} error: {e}")
             return None
