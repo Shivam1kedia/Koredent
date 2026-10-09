@@ -1611,7 +1611,6 @@ ticker,name,exchange,yf_symbol
 542459.BO,Kranti Industries Limited,BSE,KRANTI.BO
 542513.BO,UTI BSE  Sensex Next 50 ETF,BSE,UTISXN50.BO
 542524.BO,AMBASSADOR INTRA HOLDINGS LIMI,BSE,AIHL.BO
-542579.BO,Ashapuri Gold Ornament Limited,BSE,AGOL.BO
 542602.BO,Embassy Office Parks REIT,BSE,EMBASSY.BO
 542627.BO,Chandni Machines Limited,BSE,CHANDNIMACH.BO
 542628.BO,Northern Spirits Limited,BSE,NSL.BO
@@ -2324,6 +2323,7 @@ AGASTYAEN.NS,Agastya Energy and Infrastructure Limited,NSE,AGASTYAEN.NS
 AGI.NS,AGI Greenpac Limited,NSE,AGI.NS
 AGIIL.NS,Agi Infra Limited,NSE,AGIIL.NS
 AGL.NS,Allcargo Global Limited,NSE,AGL.NS
+AGOL.NS,Ashapuri Gold Ornament Limited,NSE,AGOL.NS
 AGRITECH.NS,Agri-Tech (India) Limited,NSE,AGRITECH.NS
 AGROPHOS.NS,Agro Phos India Limited,NSE,AGROPHOS.NS
 AGSTRA.NS,AGS Transact Technologies Limited,NSE,AGSTRA.NS
@@ -2564,6 +2564,7 @@ BECTORFOOD.NS,Mrs. Bectors Food Specialities Limited,NSE,BECTORFOOD.NS
 BEDMUTHA.NS,Bedmutha Industries Limited,NSE,BEDMUTHA.NS
 BEEKAY.NS,Beekay Steel Industries Limited,NSE,BEEKAY.NS
 BEL.NS,Bharat Electronics Limited,NSE,BEL.NS
+BELDING.NS,Belding India Limited,NSE,BELDING.NS
 BELLACASA.NS,Bella Casa Fashion & Retail Limited,NSE,BELLACASA.NS
 BELRISE.NS,Belrise Industries Limited,NSE,BELRISE.NS
 BEML.NS,BEML Limited,NSE,BEML.NS
@@ -2684,7 +2685,6 @@ CELEBRITY.NS,Celebrity Fashions Limited,NSE,CELEBRITY.NS
 CELLO.NS,Cello World Limited,NSE,CELLO.NS
 CEMPRO.NS,Cemindia Projects Limited,NSE,CEMPRO.NS
 CENTENKA.NS,Century Enka Limited,NSE,CENTENKA.NS
-CENTEXT-RE.NS,Century Extrusions Limited-RE,NSE,CENTEXT-RE.NS
 CENTEXT.NS,Century Extrusions Limited,NSE,CENTEXT.NS
 CENTRALBK.NS,Central Bank of India,NSE,CENTRALBK.NS
 CENTRUM.NS,Centrum Capital Limited,NSE,CENTRUM.NS
@@ -3775,6 +3775,7 @@ NAHARSPING.NS,Nahar Spinning Mills Limited,NSE,NAHARSPING.NS
 NAM-INDIA.NS,Nippon Life India Asset Management Limited,NSE,NAM-INDIA.NS
 NARMADA.NS,Narmada Agrobase Limited,NSE,NARMADA.NS
 NATCAPSUQ.NS,Natural Capsules Limited,NSE,NATCAPSUQ.NS
+NATCO-RE.NS,Natco Pharma Limited-RE,NSE,NATCO-RE.NS
 NATCOPHARM.NS,Natco Pharma Limited,NSE,NATCOPHARM.NS
 NATHBIOGEN.NS,Nath Bio-Genes (India) Limited,NSE,NATHBIOGEN.NS
 NATIONALUM.NS,National Aluminium Company Limited,NSE,NATIONALUM.NS
