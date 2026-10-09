@@ -1244,6 +1244,20 @@ def generate_portfolio_pdf(portfolio, holdings, history_data=None, alerts=None,
     return buffer.getvalue()
  
  
+def _plotly_to_png(fig, width=None, height=None):
+    """Render a Plotly figure to a PNG in memory (kaleido). None if rendering fails,
+    so callers can fall back to matplotlib or leave the chart out."""
+    try:
+        import io
+        png = fig.to_image(format="png", width=width or fig.layout.width or 800,
+                           height=height or fig.layout.height or 350, scale=2)
+        buf = io.BytesIO(png)
+        buf.seek(0)
+        return buf
+    except Exception:
+        return None
+
+
 def generate_portfolio_chart(history_data):
     """Render stacked absolute chart (Invested + Portfolio + Nifty Shadow) as PNG bytes."""
     if not history_data or len(history_data) < 2:
@@ -9224,6 +9238,8 @@ elif st.session_state.sb_view_mode == "portfolios":
                                                             port.get("benchmark_ticker"))
                                 _pdf_nifty_sh = hist_for_pdf[-1].get("nifty_shadow_value") if hist_for_pdf else None
                                 xirr_data = compute_portfolio_xirr(_pdf_econ, _pdf_nifty_sh)
+                                _pdf_cur_val = float((_pdf_econ or {}).get("total_assets")
+                                                     or port.get("current_value") or 0)
  
                                 # Goal projection + chart
                                 goal_data = None
