@@ -107,6 +107,7 @@ ticker,name,exchange,yf_symbol
 504605.BO,UNI ABEX ALLOY PRODUCTS LTD.,BSE,UNIABEXAL.BO
 504646.BO,BHAGWATI AUTOCAST LTD.,BSE,BGWTATO.BO
 504648.BO,BOMBAY WIRE ROPES LTD.,BSE,BOMBWIR.BO
+504731.BO,INDIAN BRIGHT STEEL CO.LTD.,BSE,IBRIGST.BO
 504810.BO,INFORMED TECHNOLOGIES INDIA LT,BSE,INFORTEC.BO
 504840.BO,KAIRA CAN CO.LTD.,BSE,KAIRA.BO
 504903.BO,RATHI STEEL & POWER LTD.,BSE,RATHIST.BO
@@ -2627,6 +2628,7 @@ BNALTD.NS,B & A Limited,NSE,BNALTD.NS
 BODALCHEM.NS,Bodal Chemicals Limited,NSE,BODALCHEM.NS
 BOHRAIND.NS,Bohra Industries Limited,NSE,BOHRAIND.NS
 BOMDYEING.NS,Bombay Dyeing & Mfg Company Limited,NSE,BOMDYEING.NS
+BONFIG.NS,Bonfiglioli Transmissions Limited,NSE,BONFIG.NS
 BONLON.NS,Bonlon Industries Limited,NSE,BONLON.NS
 BORANA.NS,Borana Weaves Limited,NSE,BORANA.NS
 BOROLTD.NS,Borosil Limited,NSE,BOROLTD.NS
@@ -3147,7 +3149,6 @@ HALDER.NS,Halder Venture Limited,NSE,HALDER.NS
 HALDYNGL.NS,Haldyn Glass Limited,NSE,HALDYNGL.NS
 HALEOSLABS.NS,HALEOS LABS LIMITED,NSE,HALEOSLABS.NS
 HAMPTON.NS,Hampton Sky Realty Limited,NSE,HAMPTON.NS
-HAMPTON.NS,Hampton Sky Realty Limited,NSE,HAMPTON.NS
 HAPPSTMNDS.NS,Happiest Minds Technologies Limited,NSE,HAPPSTMNDS.NS
 HAPPYFORGE.NS,Happy Forgings Limited,NSE,HAPPYFORGE.NS
 HARDWYN.NS,Hardwyn India Limited,NSE,HARDWYN.NS
@@ -3241,7 +3242,7 @@ ICEMAKE.NS,Ice Make Refrigeration Limited,NSE,ICEMAKE.NS
 ICICIAMC.NS,ICICI Prudential Asset Management Company Limited,NSE,ICICIAMC.NS
 ICICIBANK.NS,ICICI Bank Limited,NSE,ICICIBANK.NS
 ICICIGI.NS,ICICI Lombard General Insurance Company Limited,NSE,ICICIGI.NS
-ICICIPRULI.NS,ICICI Prudential Life Insurance Company Limited,NSE,ICICIPRULI.NS
+ICICILIFE.NS,ICICI Life Insurance Limited,NSE,ICICILIFE.NS
 ICIL.NS,Indo Count Industries Limited,NSE,ICIL.NS
 ICRA.NS,ICRA Limited,NSE,ICRA.NS
 IDBI.NS,IDBI Bank Limited,NSE,IDBI.NS
@@ -3941,7 +3942,6 @@ PARKHOSPS.NS,Park Medi World Limited,NSE,PARKHOSPS.NS
 PARKHOTELS.NS,Apeejay Surrendra Park Hotels Limited,NSE,PARKHOTELS.NS
 PARNAXLAB.NS,Parnax Lab Limited,NSE,PARNAXLAB.NS
 PARSVNATH.NS,Parsvnath Developers Limited,NSE,PARSVNATH.NS
-PARSVNATH.NS,Parsvnath Developers Limited,NSE,PARSVNATH.NS
 PASHUPATI.NS,Pashupati Cotspin Limited,NSE,PASHUPATI.NS
 PASUPTAC.NS,Pasupati Acrylon Limited,NSE,PASUPTAC.NS
 PATANJALI.NS,Patanjali Foods Limited,NSE,PATANJALI.NS
@@ -4378,6 +4378,7 @@ SMCGLOBAL.NS,SMC Global Securities Limited,NSE,SMCGLOBAL.NS
 SMLMAH.NS,SML Mahindra Limited,NSE,SMLMAH.NS
 SMLT.NS,Sarthak Metals Limited,NSE,SMLT.NS
 SMSPHARMA.NS,SMS Pharmaceuticals Limited,NSE,SMSPHARMA.NS
+SMT.NS,Sahajanand Medical Technologies Limited,NSE,SMT.NS
 SNOWMAN.NS,Snowman Logistics Limited,NSE,SNOWMAN.NS
 SOBHA.NS,Sobha Limited,NSE,SOBHA.NS
 SOFTTECH.NS,Softtech Engineers Limited,NSE,SOFTTECH.NS
@@ -4603,6 +4604,7 @@ TNPL.NS,Tamil Nadu Newsprint & Papers Limited,NSE,TNPL.NS
 TNTELE.NS,Tamilnadu Telecommunication Limited,NSE,TNTELE.NS
 TOKYOPLAST.NS,Tokyo Plast International Limited,NSE,TOKYOPLAST.NS
 TOLINS.NS,Tolins Tyres Limited,NSE,TOLINS.NS
+TONBO.NS,Tonbo Imaging India Limited,NSE,TONBO.NS
 TORNTPHARM.NS,Torrent Pharmaceuticals Limited,NSE,TORNTPHARM.NS
 TORNTPOWER.NS,Torrent Power Limited,NSE,TORNTPOWER.NS
 TOTAL.NS,Total Transport Systems Limited,NSE,TOTAL.NS
@@ -4835,6 +4837,7 @@ ZENITHEXPO.NS,Zenith Exports Limited,NSE,ZENITHEXPO.NS
 ZENITHSTL.NS,Zenith Steel Pipes & Industries Limited,NSE,ZENITHSTL.NS
 ZENSARTECH.NS,Zensar Technologies Limited,NSE,ZENSARTECH.NS
 ZENTEC.NS,Zen Technologies Limited,NSE,ZENTEC.NS
+ZETWERK.NS,Zetwerk Manufacturing Businesses Limited,NSE,ZETWERK.NS
 ZFCVINDIA.NS,ZF Commercial Vehicle Control Systems India Limited,NSE,ZFCVINDIA.NS
 ZFSTEERING.NS,ZF Steering Gear (India) Limited,NSE,ZFSTEERING.NS
 ZIMLAB.NS,Zim Laboratories Limited,NSE,ZIMLAB.NS

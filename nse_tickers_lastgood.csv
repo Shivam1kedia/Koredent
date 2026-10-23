@@ -273,7 +273,7 @@ AXTEL,Axtel Industries Limited,NSE,INE767C01012
 AYE,Aye Finance Limited,NSE,INE501X01029
 AYMSYNTEX,AYM Syntex Limited,NSE,INE193B01039
 AZAD,Azad Engineering Limited,NSE,INE02IJ01035
-AZADIND,Azad India Mobility Limited,NSE,INE566M01017
+AZADIND,Azad India Mobility Limited,NSE,INE566M01025
 BAFNAPH,Bafna Pharmaceuticals Limited,NSE,INE878I01022
 BAGFILMS,B.A.G Films and Media Limited,NSE,INE116D01028
 BAIDFIN,Baid Finserv Limited,NSE,INE020D01022
@@ -391,6 +391,7 @@ BNALTD,B & A Limited,NSE,INE489D01011
 BODALCHEM,Bodal Chemicals Limited,NSE,INE338D01028
 BOHRAIND,Bohra Industries Limited,NSE,INE802W01023
 BOMDYEING,Bombay Dyeing & Mfg Company Limited,NSE,INE032A01023
+BONFIG,Bonfiglioli Transmissions Limited,NSE,INE28SO01013
 BONLON,Bonlon Industries Limited,NSE,INE0B9A01018
 BORANA,Borana Weaves Limited,NSE,INE16SF01016
 BOROLTD,Borosil Limited,NSE,INE02PY01013
@@ -911,7 +912,6 @@ HALDER,Halder Venture Limited,NSE,INE115S01010
 HALDYNGL,Haldyn Glass Limited,NSE,INE506D01020
 HALEOSLABS,HALEOS LABS LIMITED,NSE,INE320X01016
 HAMPTON,Hampton Sky Realty Limited,NSE,INE299D01022
-HAMPTON,Hampton Sky Realty Limited,NSE,INE299D01022
 HAPPSTMNDS,Happiest Minds Technologies Limited,NSE,INE419U01012
 HAPPYFORGE,Happy Forgings Limited,NSE,INE330T01021
 HARDWYN,Hardwyn India Limited,NSE,INE626Z01029
@@ -1005,7 +1005,7 @@ ICEMAKE,Ice Make Refrigeration Limited,NSE,INE520Y01019
 ICICIAMC,ICICI Prudential Asset Management Company Limited,NSE,INE346A01027
 ICICIBANK,ICICI Bank Limited,NSE,INE090A01021
 ICICIGI,ICICI Lombard General Insurance Company Limited,NSE,INE765G01017
-ICICIPRULI,ICICI Prudential Life Insurance Company Limited,NSE,INE726G01019
+ICICILIFE,ICICI Life Insurance Limited,NSE,INE726G01019
 ICIL,Indo Count Industries Limited,NSE,INE483B01026
 ICRA,ICRA Limited,NSE,INE725G01011
 IDBI,IDBI Bank Limited,NSE,INE008A01015
@@ -1705,7 +1705,6 @@ PARKHOSPS,Park Medi World Limited,NSE,INE119201023
 PARKHOTELS,Apeejay Surrendra Park Hotels Limited,NSE,INE988S01028
 PARNAXLAB,Parnax Lab Limited,NSE,INE383L01019
 PARSVNATH,Parsvnath Developers Limited,NSE,INE561H01026
-PARSVNATH,Parsvnath Developers Limited,NSE,INE561H01026
 PASHUPATI,Pashupati Cotspin Limited,NSE,INE124Y01028
 PASUPTAC,Pasupati Acrylon Limited,NSE,INE818B01023
 PATANJALI,Patanjali Foods Limited,NSE,INE619A01035
@@ -2142,6 +2141,7 @@ SMCGLOBAL,SMC Global Securities Limited,NSE,INE103C01036
 SMLMAH,SML Mahindra Limited,NSE,INE294B01019
 SMLT,Sarthak Metals Limited,NSE,INE017W01010
 SMSPHARMA,SMS Pharmaceuticals Limited,NSE,INE812G01025
+SMT,Sahajanand Medical Technologies Limited,NSE,INE356Y01018
 SNOWMAN,Snowman Logistics Limited,NSE,INE734N01019
 SOBHA,Sobha Limited,NSE,INE671H01015
 SOFTTECH,Softtech Engineers Limited,NSE,INE728Z01015
@@ -2367,6 +2367,7 @@ TNPL,Tamil Nadu Newsprint & Papers Limited,NSE,INE107A01015
 TNTELE,Tamilnadu Telecommunication Limited,NSE,INE141D01018
 TOKYOPLAST,Tokyo Plast International Limited,NSE,INE932C01012
 TOLINS,Tolins Tyres Limited,NSE,INE0RWQ01014
+TONBO,Tonbo Imaging India Limited,NSE,INE0LDG01026
 TORNTPHARM,Torrent Pharmaceuticals Limited,NSE,INE685A01028
 TORNTPOWER,Torrent Power Limited,NSE,INE813H01021
 TOTAL,Total Transport Systems Limited,NSE,INE336X01012
@@ -2599,6 +2600,7 @@ ZENITHEXPO,Zenith Exports Limited,NSE,INE058B01018
 ZENITHSTL,Zenith Steel Pipes & Industries Limited,NSE,INE318D01020
 ZENSARTECH,Zensar Technologies Limited,NSE,INE520A01027
 ZENTEC,Zen Technologies Limited,NSE,INE251B01027
+ZETWERK,Zetwerk Manufacturing Businesses Limited,NSE,INE09PO01019
 ZFCVINDIA,ZF Commercial Vehicle Control Systems India Limited,NSE,INE342J01019
 ZFSTEERING,ZF Steering Gear (India) Limited,NSE,INE116C01012
 ZIMLAB,Zim Laboratories Limited,NSE,INE518E01015
