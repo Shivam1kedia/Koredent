@@ -1867,7 +1867,6 @@ ticker,name,exchange,yf_symbol
 543951.BO,Innovatus Entertainment Networ,BSE,INNOVATUS.BO
 543956.BO,ICICI Prudential Mutual Fund,BSE,QUAL30IETF.BO
 543963.BO,SHELTER PHARMA LIMITED,BSE,SHELTER.BO
-543971.BO,Bondada Engineering Limited,BSE,BONDADA.BO
 543973.BO,HDFC Mutual Fund,BSE,HDFCLIQUID.BO
 543975.BO,UTI Mutual Fund,BSE,NIFMID150.BO
 543976.BO,Shradha AI Technologies Limite,BSE,SHRAAITECH.BO
@@ -2627,6 +2626,7 @@ BNALTD.NS,B & A Limited,NSE,BNALTD.NS
 BODALCHEM.NS,Bodal Chemicals Limited,NSE,BODALCHEM.NS
 BOHRAIND.NS,Bohra Industries Limited,NSE,BOHRAIND.NS
 BOMDYEING.NS,Bombay Dyeing & Mfg Company Limited,NSE,BOMDYEING.NS
+BONDADA.NS,Bondada Engineering Limited,NSE,BONDADA.NS
 BONFIG.NS,Bonfiglioli Transmissions Limited,NSE,BONFIG.NS
 BONLON.NS,Bonlon Industries Limited,NSE,BONLON.NS
 BORANA.NS,Borana Weaves Limited,NSE,BORANA.NS
@@ -3393,6 +3393,7 @@ JMFINANCIL.NS,JM Financial Limited,NSE,JMFINANCIL.NS
 JNKINDIA.NS,JNK India Limited,NSE,JNKINDIA.NS
 JNPR.NS,Juniper Green Energy Limited,NSE,JNPR.NS
 JOCIL.NS,Jocil Limited,NSE,JOCIL.NS
+JPL.NS,Jio Platforms Limited,NSE,JPL.NS
 JPOLYINVST.NS,Jindal Poly Investment and Finance Company Limited,NSE,JPOLYINVST.NS
 JPPOWER.NS,Jaiprakash Power Ventures Limited,NSE,JPPOWER.NS
 JSFB.NS,Jana Small Finance Bank Limited,NSE,JSFB.NS
@@ -3935,6 +3936,7 @@ PARACABLES.NS,Paramount Communications Limited,NSE,PARACABLES.NS
 PARADEEP.NS,Paradeep Phosphates Limited,NSE,PARADEEP.NS
 PARAGMILK.NS,Parag Milk Foods Limited,NSE,PARAGMILK.NS
 PARAS.NS,Paras Defence and Space Technologies Limited,NSE,PARAS.NS
+PARASHLTH.NS,Paras Healthcare Limited,NSE,PARASHLTH.NS
 PARASPETRO.NS,Paras Petrofils Limited,NSE,PARASPETRO.NS
 PARIN.NS,Parin Enterprises Limited,NSE,PARIN.NS
 PARKHOSPS.NS,Park Medi World Limited,NSE,PARKHOSPS.NS
