@@ -3469,6 +3469,55 @@
       "status": "ok",
       "source_hash": "f78415adea444446",
       "retrieval": "tavily"
+    },
+    {
+      "date": "2026-10-30",
+      "field": "ltcg_pct",
+      "value": 12.5,
+      "status": "ok",
+      "source_hash": "a7fceddba17f5d86",
+      "retrieval": "tavily"
+    },
+    {
+      "date": "2026-10-30",
+      "field": "stcg_pct",
+      "value": 20.0,
+      "status": "ok",
+      "source_hash": "f077521262c9030c",
+      "retrieval": "tavily"
+    },
+    {
+      "date": "2026-10-30",
+      "field": "ltcg_holding_months",
+      "value": 12,
+      "status": "ok",
+      "source_hash": "ba1119df400f99b3",
+      "retrieval": "tavily"
+    },
+    {
+      "date": "2026-10-30",
+      "field": "ltcg_exemption_inr",
+      "value": 125000.0,
+      "status": "ok",
+      "source_hash": "c2e9da24bb870633",
+      "retrieval": "tavily"
+    },
+    {
+      "date": "2026-10-30",
+      "field": "rbi_cpi_projection_pct",
+      "value": 5.2,
+      "status": "ok",
+      "source_hash": "617de5b8b069e123",
+      "retrieval": "tavily",
+      "target_fy": "FY2027"
+    },
+    {
+      "date": "2026-10-30",
+      "field": "india_10y_yield_pct",
+      "value": 7.404,
+      "status": "ok",
+      "source_hash": "ccb4b9307ec077c8",
+      "retrieval": "tavily"
     }
   ]
 }
